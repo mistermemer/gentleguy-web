@@ -1,7 +1,7 @@
 body {
     font-family: "Fantasy", monospace;
   background-image: url("https://media.discordapp.net/attachments/996636341762797650/1000093971147673640/unknown.png?width=660&height=412");
-  background-size: 1400px;
+  background-size: cover;
 
     color: #fff;
     -webkit-font-smoothing: antialiased;
