@@ -1,16 +1,18 @@
 body {
     font-family: "Fantasy", monospace;
-  background-image: url("https://media.discordapp.net/attachments/996636341762797650/1000093971147673640/unknown.png?width=660&height=412");
-  background-size: cover;
+    background-image: url("https://media.discordapp.net/attachments/996636341762797650/1000093971147673640/unknown.png?width=660&height=412");
+    background-size: cover;
 
     color: #fff;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-size: 30px;
 }
+
 .img {
-  border-radius: 50%;
+    border-radius: 50%;
 }
+
 .image-cropper {
     max-width: 100px;
     height: auto;
@@ -18,40 +20,51 @@ body {
     overflow: hidden;
 }
 
-.image-cropper img{
+.image-cropper img {
     display: block;
     margin: 0 auto;
     height: auto;
-    width: 150%; 
+    width: 150%;
     margin: 0 0 0 -20%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border-radius: 50%;  
+    border-radius: 50%;
 }
-.nav-img {
-  border-radius: 50%;
-}link {
-     font-size: 14px !important;
-     background: transparent !important;
-     font-family: Lato, sans-serif !important;
-     text-transform: capitalize !important;
- }
- .nav-link:hover {
-     background: transparent !important;
-     color: #AD91FF !important;
-     font-weight: bold !important;
- }
 
- .login-btn {
-     border: 2px solid #AD91FF !important;
-     font-size: 10px !important;
- }
- .login-btn:hover {
-     background: #AD91FF !important;
- }
+.nav-img {
+    border-radius: 50%;
+}
+
+link {
+    font-size: 14px !important;
+    background: transparent !important;
+    font-family: Lato, sans-serif !important;
+    text-transform: capitalize !important;
+}
+
+.nav-link:hover {
+    background: transparent !important;
+    color: #AD91FF !important;
+    font-weight: bold !important;
+}
+
+.login-btn {
+    border: 2px solid #AD91FF !important;
+    font-size: 10px !important;
+}
+
+.login-btn:hover {
+    background: #AD91FF !important;
+}
+
 .navbar {
+    display: flex;
+    /* displays flex-items (children) inline */
+    justify-content: space-between;
+    /* children are evenly distributed, first child is on the left and last child on the right side */
+
     box-shadow: none !important
 }
 
@@ -71,33 +84,35 @@ body {
 }
 
 .btn-primary {
-    background-color: #AD91FF!important
+    background-color: #AD91FF !important
 }
+
 .btn-secondary {
     background-color: #2C2F33 !important
 }
+
 .heading {
     padding: 160px 50px !important;
     color: #fde90d !important;
 
-      background-position: center;
+    background-position: center;
     background-size: cover;
-  
+
     background-repeat: no-repeat;
-    
-   font-family: "Fantasy", monospace;
+
+    font-family: "Fantasy", monospace;
 
 }
 
 .title {
-   font-family: "Fantasy", monospace;
+    font-family: "Fantasy", monospace;
     line-height: 90px !important;
     margin-bottom: -2px !important;
     font-size: 36px !important
 }
 
 .subtitle {
-   font-family: "Fantasy", monospace;
+    font-family: "Fantasy", monospace;
     color: rgba(255, 255, 255, 0.685) !important;
     font-size: 16px !important;
     font-family: 'Lato', sans-serif;
@@ -113,6 +128,7 @@ body {
     background-size: 200% !important;
     background-repeat: no-repeat !important;
 }
+
 .features .title {
     font-size: 40px !important;
     color: #ffffff !important;
@@ -131,6 +147,7 @@ body {
 .features .card-title {
     margin: 0 0 -3px !important;
 }
+
 .cards {
     margin-top: 30px !important;
 }
@@ -151,7 +168,7 @@ body {
     padding-top: 300px !important;
 }
 
-.statistics .card-body{
+.statistics .card-body {
     padding: 0 !important;
     height: 280 !important;
     width: 332 !important;
@@ -183,13 +200,14 @@ body {
     background-size: 200% !important;
     background-repeat: no-repeat !important;
 }
+
 .start {
     padding: 60px 50px !important
 }
 
 .start .card {
-  background: transparent;
-    
+    background: transparent;
+
     color: #f6f9ff !important;
 }
 
@@ -198,8 +216,9 @@ body {
     border-radius: 22px !important;
     border: 4px solid #AD91FF;
 }
+
 .features .card-text {
-color: rgba(255, 255, 255, 0.46) !important
+    color: rgba(255, 255, 255, 0.46) !important
 }
 
 .features .card-body {
@@ -209,6 +228,7 @@ color: rgba(255, 255, 255, 0.46) !important
 .navbar-toggler-icon {
     color: #fff !important
 }
+
 .footer {
     text-align: center !important;
     padding: 5px 6px !important;
