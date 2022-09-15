@@ -6880,9 +6880,7 @@
   }
   
   @media screen and (min-width: 100px) {
-    .navbar-collapse:not(.has-image) {
-      background: transparent !important;
-    }
+
     .burger-menu .navbar-collapse {
       position: fixed;
       display: block !important;
