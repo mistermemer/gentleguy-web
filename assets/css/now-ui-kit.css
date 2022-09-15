@@ -6477,7 +6477,7 @@
     color: #FFFFFF;
   }
   
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 100px) {
     .sidebar-collapse .navbar-collapse {
       position: fixed;
       display: block !important;
