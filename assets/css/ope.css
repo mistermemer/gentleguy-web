@@ -122,11 +122,11 @@ body{
 }
 
 .button:hover {
-  color: var(--alternate-bot-text-color);
-  background-color: var(--bot);
+  color: blue;
+
   border-color: var(--bot);
-  transform: skewx(10deg);
-  transform: skewY(10deg);
+  transform: skewx(2deg);
+  transform: skewY(2deg);
 }
 
 .discord:hover {
