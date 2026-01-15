@@ -243,3 +243,15 @@ color: rgba(255, 255, 255, 0.46) !important
     text-align: center !important;
     color: #a2a8bd !important
 }
+/* Particle.js background fix */
+.page, main, section, .container, .block-heading, .clean-block, .clean-hero, .features, .about-us {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+/* Force transparent backgrounds for particles */
+.clean-block, .clean-hero, .text, .heading, div {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
