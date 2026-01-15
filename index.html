@@ -73,6 +73,37 @@
     .hero-buttons .btn {
         margin: 10px;
     }
+    .shooting-star {
+        position: fixed;
+        width: 5px;
+        height: 5px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        box-shadow: 0 0 5px 5px rgba(32, 32, 32, 0.8);
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    .shooting-star::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.8), transparent);
+        transform-origin: right;
+    }
+    @keyframes shoot {
+        0% {
+            transform: translate(0, 0) rotate(-45deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-500px, 500px) rotate(-45deg);
+            opacity: 0;
+        }
+    }
 </style>
   <div id="particles-js"></div>
   <div class="content-wrapper">
@@ -212,14 +243,14 @@
     particlesJS('particles-js', {
       particles: {
         number: {
-          value: 75,
+          value: 60,
           density: {
             enable: true,
-            value_area: 800
+            value_area: 1000
           }
         },
         color: {
-          value: '#d40214'
+          value: '#ffffff'
         },
         shape: {
           type: 'circle',
@@ -233,7 +264,7 @@
           random: true,
           anim: {
             enable: true,
-            speed: 0.8,
+            speed: 0.5,
             opacity_min: 0.1,
             sync: true
           }
@@ -249,7 +280,7 @@
           }
         },
         line_linked: {
-          enable: true,
+          enable: false,
           distance: 300,
           color: '#8B0000',
           opacity: 0.4,
@@ -292,6 +323,43 @@
       },
       retina_detect: true
     });
+     function createShootingStar() {
+        const star = document.createElement('div');
+        star.className = 'shooting-star';
+        
+        // Random starting position at the top
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * (window.innerHeight * 0.3);
+        
+        star.style.left = startX + 'px';
+        star.style.top = startY + 'px';
+        
+        // Random animation duration between 0.8 and 1.5 seconds
+        const duration = 1 + Math.random() * 1;
+        star.style.animation = `shoot ${duration}s linear forwards`;
+        
+        document.body.appendChild(star);
+        
+        // Remove star after animation completes
+        setTimeout(() => {
+            star.remove();
+        }, duration * 1000);
+    }
+    
+    // Create shooting stars frequently
+    setInterval(() => {
+        createShootingStar();
+    }, 2000); // Create a new shooting star every 0.8 seconds
+    
+    // Also create random bursts of multiple shooting stars
+    setInterval(() => {
+        const burstCount = 0 + Math.floor(Math.random() * 2); // 2-4 stars
+        for (let i = 0; i < burstCount; i++) {
+            setTimeout(() => {
+                createShootingStar();
+            }, i * 100);
+        }
+    }, 7000); // Create bursts every 5 seconds
   </script>
 </body>
 
